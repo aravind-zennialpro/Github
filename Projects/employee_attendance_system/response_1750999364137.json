@@ -1,0 +1,86 @@
+[
+  {
+    "id": 14,
+    "employee_id": "Emp011",
+    "action": "checkin",
+    "timestamp": "2025-06-27T04:42:32.942843"
+  },
+  {
+    "id": 13,
+    "employee_id": "Emp009",
+    "action": "checkin",
+    "timestamp": "2025-06-27T04:42:28.224879"
+  },
+  {
+    "id": 12,
+    "employee_id": "Emp004",
+    "action": "checkout",
+    "timestamp": "2025-06-27T04:42:20.394283"
+  },
+  {
+    "id": 11,
+    "employee_id": "Emp005",
+    "action": "checkout",
+    "timestamp": "2025-06-27T04:42:16.322904"
+  },
+  {
+    "id": 10,
+    "employee_id": "Emp002",
+    "action": "checkin",
+    "timestamp": "2025-06-27T04:42:06.584590"
+  },
+  {
+    "id": 9,
+    "employee_id": "Emp001",
+    "action": "checkin",
+    "timestamp": "2025-06-27T04:41:55.398099"
+  },
+  {
+    "id": 8,
+    "employee_id": "Emp001",
+    "action": "checkin",
+    "timestamp": "2025-06-27T04:41:53.924728"
+  },
+  {
+    "id": 7,
+    "employee_id": "EMP107",
+    "action": "checkout",
+    "timestamp": "2025-06-25T10:30:03.995001"
+  },
+  {
+    "id": 6,
+    "employee_id": "EMP107",
+    "action": "checkout",
+    "timestamp": "2025-06-25T10:30:02.783255"
+  },
+  {
+    "id": 5,
+    "employee_id": "EMP100",
+    "action": "checkout",
+    "timestamp": "2025-06-25T09:37:41.018386"
+  },
+  {
+    "id": 4,
+    "employee_id": "EMP107",
+    "action": "checkin",
+    "timestamp": "2025-06-25T09:37:32.637379"
+  },
+  {
+    "id": 3,
+    "employee_id": "EMP103",
+    "action": "checkin",
+    "timestamp": "2025-06-25T09:37:23.919622"
+  },
+  {
+    "id": 2,
+    "employee_id": "EMP102",
+    "action": "checkin",
+    "timestamp": "2025-06-25T09:37:13.121746"
+  },
+  {
+    "id": 1,
+    "employee_id": "EMP101",
+    "action": "checkin",
+    "timestamp": "2025-06-25T09:36:56.903745"
+  }
+]

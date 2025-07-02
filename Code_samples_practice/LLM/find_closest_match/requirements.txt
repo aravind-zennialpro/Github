@@ -1,0 +1,5 @@
+pip install transformers torch
+        or
+pip show torch
+pip show transformers
+pip install sentence-transformers
