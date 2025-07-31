@@ -1,0 +1,28 @@
+[
+   {
+      "id": 1,
+      "passenger_name": "Arav",
+      "phone": "7918187282",
+      "route": {
+         "source": "Hyderabad",
+         "destination": "Amalapuram",
+         "fare": 730,
+         "departure_time": "8:00 PM",
+         "id": 3
+      },
+      "timestamp": "2025-07-14T08:37:20.697877"
+   },
+   {
+      "id": 2,
+      "passenger_name": "zennial  pro",
+      "phone": "1223367",
+      "route": {
+         "source": "Hyderabad",
+         "destination": "Vijayawada",
+         "fare": 520,
+         "departure_time": "7:30 PM",
+         "id": 2
+      },
+      "timestamp": "2025-07-14T11:44:30.331154"
+   }
+]
