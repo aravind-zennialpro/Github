@@ -1,0 +1,25 @@
+{
+    "query": "I enjoy learning Python",
+    "results": [
+        {
+            "sentence": "Studying Python is enjoyable",
+            "similarity": 0.9990489482879639
+        },
+        {
+            "sentence": "Python is a powerful language",
+            "similarity": 0.997957170009613
+        },
+        {
+            "sentence": "The weather is nice today",
+            "similarity": 0.9970824718475342
+        },
+        {
+            "sentence": "I love Programing in Java",
+            "similarity": 0.993843138217926
+        },
+        {
+            "sentence": "Bananas are rich is potassium",
+            "similarity": 0.988772988319397
+        }
+    ]
+}

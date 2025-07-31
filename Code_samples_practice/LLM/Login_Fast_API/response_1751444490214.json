@@ -1,0 +1,13 @@
+[
+  {
+    "timestamp": "2025-07-02T08:21:09.953931",
+    "status": "success",
+    "message": "Login successful",
+    "token": "abcd1234"
+  },
+  {
+    "timestamp": "2025-07-02T08:21:13.942412",
+    "status": "error",
+    "message": "Invalid credentials"
+  }
+]

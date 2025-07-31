@@ -1,0 +1,15 @@
+{
+  "source": {
+    "id": null,
+    "name": "Bennet.org"
+  },
+  "author": "Tom Bennet",
+  "title": "How secure is your Bitcoin wallet's mnemonic seed phrase?",
+  "description": "What makes your Bitcoin wallet's seed phrase secure? Explore entropy, checksums, and BIP39 in this hands-on, interactive guide to mnemonic generation.",
+  "url": "https://bennet.org/blog/how-secure-is-your-bitcoin-wallets-mnemonic-seed-phrase/",
+  "urlToImage": "https://bennet.org/blog/how-secure-is-your-bitcoin-wallets-mnemonic-seed-phrase/index.png",
+  "publishedAt": "2025-07-11T13:01:07Z",
+  "content": "Your Bitcoin wallets security boils down to a list of random words. But how random is random? And how hard would it be for someone to guess your seed phrase?\r\nWhen setting up a new wallet, youre typi… [+12609 chars]",
+  "fetched_at": "2025-07-31T16:03:19.250365+00:00",
+  "article_image_original": "queue/27e5d427-2440-4aab-9f1f-d5df75baf0fc/27e5d427-2440-4aab-9f1f-d5df75baf0fc_index.png"
+}
