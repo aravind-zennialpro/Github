@@ -1,0 +1,26 @@
+2025-07-29 21:23:24,748 - WARNING - Password failed validation: StrongPass@123
+2025-07-29 21:26:17,405 - WARNING - Password did NOT meet rules: Welcome@123
+2025-07-29 21:26:17,405 - ERROR - Password failed complexity check: Welcome@123
+2025-07-29 21:46:54,322 - INFO - [Mongo] Registered: validuser@example.com
+2025-07-29 21:46:55,099 - ERROR - MySQL save failed: (mysql.connector.errors.ProgrammingError) 1049 (42000): Unknown database 'user_register'
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-07-29 21:48:30,222 - INFO - [Mongo] Registered: validuser@example.com
+2025-07-29 21:48:30,993 - ERROR - MySQL save failed: (mysql.connector.errors.ProgrammingError) 1146 (42S02): Table 'user_register.users' doesn't exist
+[SQL: INSERT INTO users (username, first_name, last_name, dob, doj, address, comment, is_active, created_at) VALUES (%(username)s, %(first_name)s, %(last_name)s, %(dob)s, %(doj)s, %(address)s, %(comment)s, %(is_active)s, %(created_at)s)]
+[parameters: {'username': 'validuser@example.com', 'first_name': 'Valid', 'last_name': 'User', 'dob': datetime.datetime(2000, 1, 1, 0, 0), 'doj': datetime.datetime(2023, 1, 1, 0, 0), 'address': 'Hyderabad', 'comment': 'Test user', 'is_active': 1, 'created_at': datetime.datetime(2025, 7, 29, 16, 18, 30, 135988)}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-07-29 21:51:44,425 - INFO - [Mongo] Registered: validuser@example.com
+2025-07-29 21:51:45,259 - INFO - [MySQL] Registered: validuser@example.com
+2025-07-29 22:02:28,556 - WARNING - Password change failed: Invalid old password for dummyuser@example.com
+2025-07-29 22:04:23,773 - WARNING - Password change failed: Invalid old password for dummyuser@example.com
+2025-07-29 22:12:51,547 - INFO - MongoDB password updated for: validuser@example.com
+2025-07-29 22:12:52,356 - INFO - MySQL password timestamp updated for: validuser@example.com
+2025-07-29 22:42:29,612 - WARNING - Login failed: Incorrect password - validuser@example.com
+2025-07-29 22:42:41,044 - WARNING - Login failed: Incorrect password - validuser@example.com
+2025-07-29 22:43:43,404 - INFO - MongoDB: Username updated from validuser@example.com to Aravind@gmail.com
+2025-07-29 22:43:44,190 - INFO - MySQL: Username updated from validuser@example.com to Aravind@gmail.com
+2025-07-29 22:44:05,687 - INFO - [FORGOT-PASSWORD] Token generated for Aravind@gmail.com: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBcmF2aW5kQGdtYWlsLmNvbSIsImV4cCI6MTc1Mzg5NTY0NX0.k9jGKKZS4jzU5Qw1LJI1YETMIAxsC_7DpCOxr5W-6-0
+2025-07-29 22:44:43,664 - WARNING - Logout Sucessful - Aravind@gmail.com
+2025-07-29 22:45:33,732 - WARNING - Login failed: User not found - valodate@gmail.com
+2025-07-29 22:45:46,784 - WARNING - Login failed: User not found - aravind@gmail.com
+2025-07-29 22:46:22,029 - INFO - [FORGOT-PASSWORD] Token generated for Aravind@gmail.com: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBcmF2aW5kQGdtYWlsLmNvbSIsImV4cCI6MTc1Mzg5NTc4Mn0.5WIbVEl9gWnHMBo2dUNGonQvBM4V4hO0cbrsQ6NJIV0

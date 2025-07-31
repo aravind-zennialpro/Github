@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pydantic
+python-jose
+bcrypt
+motor
+sqlalchemy
+pymysql
+email-validator
+python-dotenv
+pyjwt
