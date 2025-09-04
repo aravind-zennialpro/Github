@@ -120,6 +120,6 @@ The Personal Travel Assistant enables users to:
 ```
 
 # Conclusion
-✅ PTA is scalable, production-ready, and client-focused.
-✅ It integrates weather, buses, and hotels into one backend system.
-✅ Suitable for real-time travel planning and extendable for production use.
+- ✅ PTA is scalable, production-ready, and client-focused.
+- ✅ It integrates weather, buses, and hotels into one backend system.
+- ✅ Suitable for real-time travel planning and extendable for production use.
