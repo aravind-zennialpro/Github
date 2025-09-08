@@ -42,9 +42,9 @@ async def search_travel(req: SearchRequest):
 
 @router.post("/book", response_model=BookingResponse)
 async def create_booking(b: BookingRequest):
-    """
-    Book a trip using bus_id and hotel_id, but save full details into MongoDB.
-    """
+    
+    # Book a trip using bus_id and hotel_id, but save full details into MongoDB.
+    
     # 1. searching bus details
     bus = await get_bus_by_id(b.bus_id, b.from_city, b.to_city, b.depart_date)
     if not bus:
