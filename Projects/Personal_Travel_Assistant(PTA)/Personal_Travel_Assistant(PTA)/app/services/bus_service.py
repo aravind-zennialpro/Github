@@ -3,10 +3,6 @@ import asyncio
 from datetime import datetime, timedelta
 
 async def search_buses(from_city: str, to_city: str, depart_date: str = None):
-    """
-    Demo/mock bus search for APSRTC, TSRTC, and Private Travels.
-    Returns 5 sample bus options WITH SERIAL NUMBERS.
-    """
     base_time = datetime.now().replace(minute=0, second=0, microsecond=0)
 
     buses = [
@@ -62,9 +58,9 @@ async def search_buses(from_city: str, to_city: str, depart_date: str = None):
 
 
 async def get_bus_by_id(bus_id: int, from_city: str, to_city: str, depart_date: str = None):
-    """
-    Fetch a single bus by its serial number.
-    """
+
+# searching a single bus by its serial number.
+
     buses = await search_buses(from_city, to_city, depart_date)
     for bus in buses:
         if bus["id"] == bus_id:

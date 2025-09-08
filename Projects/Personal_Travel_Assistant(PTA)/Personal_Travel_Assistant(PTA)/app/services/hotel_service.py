@@ -7,10 +7,7 @@ load_dotenv()
 HOTEL_API_URL = os.getenv("HOTEL_API_URL", "https://api.makcorps.com/free")
 
 async def search_hotels(city: str, limit: int = 5):
-    """
-    Try a free/demo hotel API. If it fails or returns nothing, fall back to mocked data.
-    Each hotel is assigned a SERIAL NUMBER.
-    """
+ # if api fails
     hotels = []
     try:
         async with httpx.AsyncClient(timeout=8) as client:
@@ -20,7 +17,7 @@ async def search_hotels(city: str, limit: int = 5):
                 if isinstance(data, list) and len(data) > 0:
                     for i, h in enumerate(data[:limit]):
                         hotels.append({
-                            "id": i + 1,  # 🔹 serial number
+                            "id": i + 1,  # serial number
                             "name": h.get("name", f"{city} Hotel {i+1}"),
                             "address": h.get("address", f"{city} center"),
                             "price_per_night": h.get("price", 2000),
@@ -30,7 +27,7 @@ async def search_hotels(city: str, limit: int = 5):
     except Exception:
         pass
 
-    # 🔹 Fallback mocked hotels (5 options)
+    # get back to mocked hotels (5 options)
     return [
         {"id": 1, "name": f"{city} Grand Hotel", "address": f"Central {city}", "price_per_night": 2500, "rating": 4.5},
         {"id": 2, "name": f"{city} Comfort Stay", "address": f"Main Road, {city}", "price_per_night": 1800, "rating": 4.0},

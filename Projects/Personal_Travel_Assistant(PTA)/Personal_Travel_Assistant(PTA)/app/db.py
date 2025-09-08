@@ -11,5 +11,5 @@ DB_NAME = os.getenv("DB_NAME", "pta_db")
 client = AsyncIOMotorClient(MONGODB_URI)
 db = client[DB_NAME]
 
-# Collections
+# Collections fom db
 bookings_collection = db["bookings"]

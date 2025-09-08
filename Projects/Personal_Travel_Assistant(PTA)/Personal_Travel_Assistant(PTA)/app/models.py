@@ -6,7 +6,7 @@ from datetime import date
 class SearchRequest(BaseModel):
     from_city: str
     to_city: str
-    depart_date: Optional[str] = None  # YYYY-MM-DD optional; if None -> today
+    depart_date: Optional[str] = None
 
 class BusInfo(BaseModel):
     id: int
@@ -41,8 +41,8 @@ class BookingRequest(BaseModel):
     from_city: str
     to_city: str
     depart_date: str
-    bus_id: int       # 🔹 select bus by serial number
-    hotel_id: int     # 🔹 select hotel by serial number
+    bus_id: int       # select bus by serial number
+    hotel_id: int     # select hotel by serial number
 
 class BookingResponse(BaseModel):
     booking_id: str

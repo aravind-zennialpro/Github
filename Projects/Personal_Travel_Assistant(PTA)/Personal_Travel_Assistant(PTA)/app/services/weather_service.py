@@ -7,11 +7,7 @@ load_dotenv()
 OPEN_METEO_BASE = os.getenv("OPEN_METEO_BASE", "https://api.open-meteo.com/v1/forecast")
 
 async def get_weather_summary_for_city(city_name: str, date: str = None):
-    """
-    Simple geocoding by city name: for a demo we call Open-Meteo's geocoding or you can
-    hardcode lat/lon mapping for a few cities. Here we'll call the free geocoding endpoint.
-    """
-    # Use Open-Meteo geocoding
+    # Use Open-Meteo for weather summary
     geocode_url = f"https://geocoding-api.open-meteo.com/v1/search?name={city_name}&count=1"
     async with httpx.AsyncClient(timeout=10) as client:
         geo_r = await client.get(geocode_url)
@@ -22,7 +18,7 @@ async def get_weather_summary_for_city(city_name: str, date: str = None):
         loc = geo["results"][0]
         lat, lon = loc["latitude"], loc["longitude"]
 
-        # Build forecast request: current_weather + daily precipitation
+        # Build weather request: current_weather at destination
         params = {
             "latitude": lat,
             "longitude": lon,
@@ -34,11 +30,11 @@ async def get_weather_summary_for_city(city_name: str, date: str = None):
         resp.raise_for_status()
         j = resp.json()
 
-    # Simplify mapping:
+    # mathing the weather to base model:
     current = j.get("current_weather", {})
     temp_c = current.get("temperature")
     weathercode = current.get("weathercode")
-    # map weathercode roughly:
+    #  weather logics:
     if weathercode is None:
         summary = "Unknown"
     elif weathercode >= 80:

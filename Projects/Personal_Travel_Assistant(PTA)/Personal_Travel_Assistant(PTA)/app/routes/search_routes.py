@@ -36,7 +36,7 @@ async def search_travel(req: SearchRequest):
     hotels = [HotelInfo(**h) for h in hotels_raw]
 
     # 4. suggestion
-    suggestion = make_suggestion_from_weather(weather_info.summary, user_name="Arvind")
+    suggestion = make_suggestion_from_weather(weather_info.summary)
 
     return SearchResponse(weather=weather_info, buses=buses, hotels=hotels, suggestion=suggestion)
 
@@ -45,12 +45,12 @@ async def create_booking(b: BookingRequest):
     """
     Book a trip using bus_id and hotel_id, but save full details into MongoDB.
     """
-    # 1. Fetch bus details
+    # 1. searching bus details
     bus = await get_bus_by_id(b.bus_id, b.from_city, b.to_city, b.depart_date)
     if not bus:
         raise HTTPException(status_code=404, detail="Bus not found")
 
-    # 2. Fetch hotel details
+    # 2. searching hotel details
     hotel = await get_hotel_by_id(b.hotel_id, b.to_city)
     if not hotel:
         raise HTTPException(status_code=404, detail="Hotel not found")
@@ -63,8 +63,8 @@ async def create_booking(b: BookingRequest):
         "from_city": b.from_city,
         "to_city": b.to_city,
         "depart_date": b.depart_date,
-        "bus": bus,        # 🔹 full bus info
-        "hotel": hotel,    # 🔹 full hotel info
+        "bus": bus,        #  full bus info
+        "hotel": hotel,    #  full hotel info
         "booking_id": booking_id,
         "created_at": datetime.utcnow().isoformat()
     }
@@ -76,9 +76,9 @@ async def create_booking(b: BookingRequest):
 
 @router.get("/bookings")
 async def get_all_bookings():
-    """
-    Get all saved bookings from MongoDB with full bus & hotel info.
-    """
+
+    # Get all saved bookings from MongoDB with full bus & hotel info.
+
     bookings_cursor = bookings_collection.find({})
     bookings = []
     async for doc in bookings_cursor:

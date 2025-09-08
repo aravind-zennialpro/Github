@@ -1,4 +1,3 @@
-# app/main.py
 from fastapi import FastAPI
 from app.routes.search_routes import router as search_router
 from fastapi.middleware.cors import CORSMiddleware
