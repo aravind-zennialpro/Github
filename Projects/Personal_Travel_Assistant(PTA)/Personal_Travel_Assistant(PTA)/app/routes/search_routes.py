@@ -1,7 +1,7 @@
 # app/routes/search_routes.py
-from fastapi import APIRouter, HTTPException
-from app.models import SearchRequest, SearchResponse, WeatherInfo, BusInfo, HotelInfo, BookingRequest, BookingResponse
-from app.services.weather_service import get_weather_summary_for_city
+from fastapi import APIRouter, HTTPException # create router to attach API Endpoints and HTTPException is used to get HTTP error Response
+from app.models import SearchRequest, SearchResponse, WeatherInfo, BusInfo, HotelInfo, BookingRequest, BookingResponse # models are pydantic models is used for validation and response
+from app.services.weather_service import get_weather_summary_for_city #functions that helps to implemnets business core logics
 from app.services.hotel_service import search_hotels, get_hotel_by_id
 from app.services.bus_service import search_buses, get_bus_by_id
 from app.db import bookings_collection
@@ -85,3 +85,13 @@ async def get_all_bookings():
         doc["_id"] = str(doc["_id"])  # Convert ObjectId to string
         bookings.append(doc)
     return {"count": len(bookings), "bookings": bookings}
+
+@router.delete("/cancel/{booking_id}")
+async def cancel_booking(booking_id: str):
+    # delete the booking using Booking_id
+    result = await bookings_collection.delete_one({"booking_id": booking_id})
+
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="Booking not found")
+
+    return {"message": f"Booking {booking_id} has been cancelled successfully."}
