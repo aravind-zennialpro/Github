@@ -1,6 +1,7 @@
 <div align="center">
-<img src="..\Personal_Travel_Assistant(PTA)\image-4.png">
+  <img src="./PTA_logo.png" alt="PTA Logo" width="64"/>
 </div>
+
 
 # Personal Travel Assistant (PTA)
 
