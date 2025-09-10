@@ -1,4 +1,8 @@
-# 🌍 Personal Travel Assistant (PTA)
+<div align="center">
+<img src="..\Personal_Travel_Assistant(PTA)\image-4.png">
+</div>
+
+# Personal Travel Assistant (PTA)
 
 A smart **backend system** built with **FastAPI** and **MongoDB** that helps travelers plan their journey by combining **Weather Forecasts**, **Bus Availability**, and **Hotel Options** into one platform.  
 
